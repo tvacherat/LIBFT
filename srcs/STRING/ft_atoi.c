@@ -6,7 +6,7 @@
 /*   By: tvachera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 16:19:04 by tvachera          #+#    #+#             */
-/*   Updated: 2020/11/16 16:19:16 by tvachera         ###   ########.fr       */
+/*   Updated: 2020/12/24 12:22:34 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int	ft_atoi(const char *str)
 {
 	unsigned int	i;
-	short			is_negative;
+	int				is_negative;
 	unsigned int	nb;
 
 	i = 0;

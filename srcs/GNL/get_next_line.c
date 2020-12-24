@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/get_next_line.h"
+#include "../../includes/libft.h"
 #include "../../includes/libft.h"
 
 int		get_line_from_buff(char **line, t_file *elem)
@@ -93,7 +93,7 @@ int		manage_exit(t_file **root, t_file *elem, int bytes, char **line)
 	return (1);
 }
 
-short	find_endl(char *buff, int size)
+bool	find_endl(char *buff, int size)
 {
 	int	i;
 
@@ -101,10 +101,10 @@ short	find_endl(char *buff, int size)
 	while (i < size)
 	{
 		if (buff[i] == 10)
-			return (TRUE);
+			return (true);
 		i++;
 	}
-	return (FALSE);
+	return (false);
 }
 
 int		get_next_line(int fd, char **line)
@@ -122,7 +122,7 @@ int		get_next_line(int fd, char **line)
 		return (get_line_from_buff(line, elem));
 	if (get_line_from_buff(&ret, elem) == -1)
 		return (-1);
-	while (find_endl(elem->buff, bytes) == FALSE)
+	while (find_endl(elem->buff, bytes) == false)
 	{
 		if (!(bytes = read(fd, elem->buff, BUFFER_SIZE)))
 			break ;

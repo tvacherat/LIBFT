@@ -12,7 +12,7 @@
 
 #include "../../includes/libft.h"
 
-static short	is_set(char c, char const *set)
+static bool	is_set(char c, char const *set)
 {
 	size_t	i;
 

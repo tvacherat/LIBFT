@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/get_next_line.h"
+#include "../../includes/libft.h"
 #include "../../includes/libft.h"
 
 size_t	line_len(char *str)

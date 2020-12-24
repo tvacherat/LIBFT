@@ -35,7 +35,7 @@ int					get_line_from_buff(char **line, t_file *elem);
 char				*concat(char *ret, t_file *elem, ssize_t bytes);
 int					manage_exit(t_file **root, t_file *elem, int bytes
 					, char **line);
-short				find_endl(char *buff, int size);
+bool				find_endl(char *buff, int size);
 int					get_next_line(int fd, char **line);
 
 #endif
