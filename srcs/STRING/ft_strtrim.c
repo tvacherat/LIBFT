@@ -6,7 +6,7 @@
 /*   By: tvachera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 16:20:36 by tvachera          #+#    #+#             */
-/*   Updated: 2020/11/16 16:20:38 by tvachera         ###   ########.fr       */
+/*   Updated: 2020/12/24 13:24:10 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ static bool	is_set(char c, char const *set)
 	while (set[i])
 	{
 		if (set[i] == c)
-			return (1);
+			return (true);
 		i++;
 	}
-	return (0);
+	return (false);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		start;
