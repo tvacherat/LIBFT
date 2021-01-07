@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_list_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvachera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 16:19:40 by tvachera          #+#    #+#             */
-/*   Updated: 2021/01/06 19:46:28 by tvachera         ###   ########.fr       */
+/*   Created: 2020/09/25 15:08:47 by tvachera          #+#    #+#             */
+/*   Updated: 2021/01/07 15:02:27 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lst_sort(t_list **begin_list, int (*cmp)())
 {
-	t_list	*element;
+	t_list	*current;
+	t_list	*ptr;
+	void	*content;
 
-	if (alst && *alst)
+	ptr = *begin_list;
+	while (ptr)
 	{
-		element = *alst;
-		while (element->next)
-			element = element->next;
-		element->next = new;
+		current = *begin_list;
+		while (current->next)
+		{
+			if ((*cmp)(current->content, current->next->content) > 0)
+			{
+				content = current->content;
+				current->content = current->next->content;
+				current->next->content = content;
+			}
+			current = current->next;
+		}
+		ptr = ptr->next;
 	}
-	else
-		*alst = new;
 }

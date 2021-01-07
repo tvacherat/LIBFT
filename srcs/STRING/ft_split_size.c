@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_split_size.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tvachera <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tvachera <tvacherat@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 16:19:40 by tvachera          #+#    #+#             */
-/*   Updated: 2021/01/06 19:46:28 by tvachera         ###   ########.fr       */
+/*   Created: 2021/01/07 19:17:38 by tvachera          #+#    #+#             */
+/*   Updated: 2021/01/07 19:18:56 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+int	ft_split_size(char **split)
 {
-	t_list	*element;
+	int	i;
 
-	if (alst && *alst)
-	{
-		element = *alst;
-		while (element->next)
-			element = element->next;
-		element->next = new;
-	}
-	else
-		*alst = new;
+	i = 0;
+	if (!split)
+		return (0);
+	while (split[i])
+		i++;
+	return (i);
 }

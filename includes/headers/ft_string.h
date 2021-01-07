@@ -6,7 +6,7 @@
 /*   By: tvachera <tvacherat@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 11:46:08 by tvachera          #+#    #+#             */
-/*   Updated: 2020/12/24 13:23:27 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/01/07 19:21:44 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ char	*ft_substr(char const *s, unsigned int start
 		, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
+char	**ft_split(char *str, char *charset);
+int		ft_split_size(char **split);
+void	ft_free_split(char **split);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int
 		, char));
