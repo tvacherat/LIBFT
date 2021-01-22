@@ -6,7 +6,7 @@
 /*   By: tvachera <tvacherat@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 11:46:08 by tvachera          #+#    #+#             */
-/*   Updated: 2021/01/07 19:21:44 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/01/22 11:18:59 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,11 @@ void	ft_free_split(char **split);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int
 		, char));
+int		ft_islower(int c);
+int		ft_isupper(int c);
+void	ft_strclr(char *s);
+char	*ft_strncpy(char *dest, char *src, size_t len);
+char	*ft_strndup(const char *s, size_t n);
+char	*ft_strnew(size_t size);
 
 #endif
