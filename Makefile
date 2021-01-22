@@ -24,7 +24,7 @@ all				:	init $(NAME)
 					@ echo "$(_SUCCESS) libft.a created"
 
 init			:
-					@ echo "$(_INFO) Initialize libft"
+					@ echo "$(_INFO) Initializing libft..."
 					@ $(shell mkdir -p $(OBJ_DIR))
 
 $(NAME)			:	$(OBJ)
