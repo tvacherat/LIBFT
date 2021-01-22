@@ -6,12 +6,12 @@
 /*   By: tvachera <tvacherat@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 11:42:08 by tvachera          #+#    #+#             */
-/*   Updated: 2021/01/22 11:13:36 by jpeyron          ###   ########.fr       */
+/*   Updated: 2021/01/22 12:35:17 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MEMORY_H
-# define MEMORY_H
+#ifndef FT_MEMORY_H
+# define FT_MEMORY_H
 
 void	*ft_memset(void *b, int c, size_t n);
 void	ft_bzero(void *s, size_t n);

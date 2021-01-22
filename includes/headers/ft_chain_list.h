@@ -6,12 +6,12 @@
 /*   By: tvachera <tvacherat@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 11:25:18 by tvachera          #+#    #+#             */
-/*   Updated: 2021/01/07 12:21:57 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/01/22 12:35:06 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHAIN_LIST_H
-# define CHAIN_LIST_H
+#ifndef FT_CHAIN_LIST_H
+# define FT_CHAIN_LIST_H
 
 typedef struct	s_list
 {
