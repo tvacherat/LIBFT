@@ -6,18 +6,18 @@
 /*   By: jpeyron <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:31:42 by jpeyron           #+#    #+#             */
-/*   Updated: 2021/01/27 13:23:54 by jpeyron          ###   ########.fr       */
+/*   Updated: 2021/01/28 17:07:37 by jpeyron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-size_t	total_len(char const *s1, char const *s2, char const *sep)
+static size_t	total_len(char const *s1, char const *s2, char const *sep)
 {
 	return ((ft_strlen(s1) + ft_strlen(s2) + ft_strlen(sep) + 1));
 }
 
-void	join_str(size_t *j, char *join, const char *s)
+static void		join_str(size_t *j, char *join, const char *s)
 {
 	size_t	i;
 
@@ -29,7 +29,7 @@ void	join_str(size_t *j, char *join, const char *s)
 	}
 }
 
-char	*ft_strjoin_sep(char const *s1, char *sep, char const *s2)
+char			*ft_strjoin_sep(char const *s1, char *sep, char const *s2)
 {
 	size_t	j;
 	char	*join;
